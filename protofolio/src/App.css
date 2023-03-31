@@ -78,7 +78,7 @@ nav{
 
 .linknav:hover::after{
   /* animation: nav 1s ; */
-  transform: scale(1);
+  transform: scale(0.7);
 }
 /* .linknav:hover::before{
   animation: nav 1s alternate;
@@ -86,10 +86,10 @@ nav{
 
 @keyframes nav{
   0%{
-    transform: scalex(0);
+    transform: scaleX(0);
   }
   100%{
-    transform: scalex(1);
+    transform: scaleX(1);
   }
 }
 
