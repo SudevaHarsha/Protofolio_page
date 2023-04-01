@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div>
+    <>
         <div className="navbar">
             <div className="navwelcome">
                 <h4>welcome</h4>
@@ -17,7 +17,7 @@ const Navbar = () => {
                 </ul>
             </nav>
         </div>
-    </div>
+    </>
   )
 }
 
