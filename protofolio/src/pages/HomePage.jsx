@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState,useEffect } from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'
 
 const HomePage = () => {
 
@@ -25,7 +25,6 @@ const HomePage = () => {
         setLetter(incletter);
         /* let res=texts[index].charAt(letter); */
         setResult(result+texts[index].charAt(letter));
-        console.log(letter);
       }
       /* const j=texts[index].length && !deleting ? true :false;
       setDeleting(j); */
@@ -55,7 +54,7 @@ const HomePage = () => {
   }
 
   return (
-    <>
+    <div className='parent'>
       <Navbar/>
       <div className="hero_section">
         <div className='img_container'> 
@@ -65,9 +64,14 @@ const HomePage = () => {
           <div className="changing_text">
             <h1 className="animate_text">i am a <span>{result}</span></h1>
           </div>
+          <div className="about_me">
+            <p className="paragraph">hi i am an passionate web developer and an eager developer to learn and know about new technologies and frameworks</p>
+          </div>
         </div>
+        <div className='s_container'>S</div>
       </div>
-    </>
+      <Footer/>
+    </div>
   )
 };
 
