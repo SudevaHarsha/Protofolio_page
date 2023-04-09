@@ -199,11 +199,11 @@ nav{
   margin-top: 30px;
 }
 
-span{
+.result{
   position: relative;
 }
 
-span::after{
+.result::after{
   content: '';
   position: absolute;
   height: 100%;
@@ -421,10 +421,87 @@ span::after{
   background-color: #eee;
 } */
 
-.skill_category{
+.circle{
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+/* .skill_category{
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+  display: flex;
+  background-image: url("https://avatars.githubusercontent.com/u/83502526?v=4");
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
+} */
+
+.skill_category{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:100px ;
+}
+
+.circle_img{
+  width: 190px;
+  height: 190px;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  /* object-fit: contain;
+  overflow: hidden; */
+}
+
+.list{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  transition: 1s;
+}
+.list img{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+/*   object-fit: cover;
+  overflow: hidden; */
+} 
+.img_round{
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.list:nth-child(1) img{
+  animation: rot 2s ease-in-out infinite;
+  transform: translate(-20%,10%);
+}
+/* @keyframes rot{
+  100%{
+    transform: translate(130%,10%);
+
+  }
+} */
+.list:nth-child(2) img{
+  transform: translate(230%,10%);
+}
+.list:nth-child(3) img{
+  transform: translate(-30%,160%);
 }

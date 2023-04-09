@@ -56,10 +56,22 @@ const AboutPage = () => {
             </div>
             </>
           })}
-        </div>
-        <div className="skill_category">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2U-ZFGorCbBd0RhbkFn5M2fp-v5N2XHafA1NM69Nv7Q&usqp=CAU&ec=48665699" />
-        </div>
+        </div>       
+          <div className="circle">
+            <div className="skill_category">
+              <span className='list' style={{'--v':1}}>
+                <img  className='img_round'src="https://res.cloudinary.com/thewebmaster/image/upload/c_scale,f_auto,q_auto:best,w_516/images/html/html5.png" alt="img" />
+              </span>
+              <span className='list' style={{'--v':2}}>
+                <img src="https://res.cloudinary.com/thewebmaster/image/upload/c_scale,f_auto,q_auto:best,w_516/images/html/html5.png" alt="img" />
+              </span>
+              <span className='list' style={{'--v':3}}>
+                <img src="https://res.cloudinary.com/thewebmaster/image/upload/c_scale,f_auto,q_auto:best,w_516/images/html/html5.png" alt="img" />
+              </span>
+            {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2U-ZFGorCbBd0RhbkFn5M2fp-v5N2XHafA1NM69Nv7Q&usqp=CAU&ec=48665699" /> */}
+            <img src="https://avatars.githubusercontent.com/u/83502526?v=4" className='circle_img'></img>
+            </div>
+          </div>
       </div>
     </div>
   )

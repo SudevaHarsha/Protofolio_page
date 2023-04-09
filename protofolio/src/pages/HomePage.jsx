@@ -62,7 +62,7 @@ const HomePage = () => {
         <div className="hero_text">
           <h1 className="fixed_text">I Am Sudeva harsha</h1>
           <div className="changing_text">
-            <h1 className="animate_text">i am a <span>{result}</span></h1>
+            <h1 className="animate_text">i am a <span className='result'>{result}</span></h1>
           </div>
           <div className="about_me">
             <p className="paragraph">hi i am an passionate web developer and an eager developer to learn and know about new technologies and frameworks</p>
