@@ -37,7 +37,6 @@ const AboutPage = () => {
       <Navbar />
       <div className="about_hero_section">
         <div className="about_img_container">
-          {/* <img src='https://c0.wallpaperflare.com/preview/1004/350/396/abstract-php-c-analytics-thumbnail.jpg' /> */}
           <h4>waanna know more about me?</h4>
         </div>
         <div className="about_skills"> 
@@ -59,19 +58,18 @@ const AboutPage = () => {
         </div>       
           <div className="circle">
             <div className="skill_category">
-              <span className='list' style={{'--v':1}}>
-                <img  className='img_round'src="https://res.cloudinary.com/thewebmaster/image/upload/c_scale,f_auto,q_auto:best,w_516/images/html/html5.png" alt="img" />
+              <span className='list' ></span>
+              <span className='list'></span>
+              <span  className='list'style={{'--v':2}}>
               </span>
-              <span className='list' style={{'--v':2}}>
-                <img src="https://res.cloudinary.com/thewebmaster/image/upload/c_scale,f_auto,q_auto:best,w_516/images/html/html5.png" alt="img" />
+              <span className='list'style={{'--v':3}}>
               </span>
-              <span className='list' style={{'--v':3}}>
-                <img src="https://res.cloudinary.com/thewebmaster/image/upload/c_scale,f_auto,q_auto:best,w_516/images/html/html5.png" alt="img" />
-              </span>
-            {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2U-ZFGorCbBd0RhbkFn5M2fp-v5N2XHafA1NM69Nv7Q&usqp=CAU&ec=48665699" /> */}
-            <img src="https://avatars.githubusercontent.com/u/83502526?v=4" className='circle_img'></img>
+              <span className='list'></span>
             </div>
+            <img src='https://www.webefficient.agency/themes/web-efficient-2017/assets/images/og/en/servicii-implementare-frontend.png' className='circle_img'/>
+
           </div>
+         
       </div>
     </div>
   )
