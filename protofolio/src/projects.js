@@ -9,17 +9,17 @@ const slides=[
     },
     {
       index:1,
-      title:"hotstar  page",
+      title:"tasky application clone",
       link:"",
-      des:"this is an clone of zomato landing page,which is a clone of landing page of original zomato",
-      techs:["html","css"]
+      des:"A clone of task management app which is used to manage various tasks.",
+      techs:["html","css","js"]
     },
     {
       index:2,
-      title:"hotstar ",
+      title:"Book-management-app-clone",
       link:"",
-      des:"this is an clone of zomato landing page,which is a clone of landing page of original zomato",
-      techs:["html","css"]
+      des:"these book amangement clone is an backend web application which interact with database to store and retrive deatiles of books according to user requests.",
+      techs:["node-js","Express-js and MongoDB"]
     },
   ];
 

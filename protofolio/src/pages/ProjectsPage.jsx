@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import Navbar from '../components/Navbar';
 import Slider from './Projectslider';
 import slides from '../projects';
+import {IoCloseOutline} from "react-icons/io5";
 
 
 const ProjectsPage = () => {
@@ -25,11 +26,14 @@ const ProjectsPage = () => {
     <>
     <Navbar />
     <div className='project_container'>
-      <Slider Singlecard={Singlecard} Removecard={Removecard} />
+      <Slider Singlecard={Singlecard} />
       {
         display&& <>
         <div className="project_details_container">
           <div className='card'>
+            <div className="close_button">
+              <IoCloseOutline onClick={Removecard} />
+            </div>
             <div>
               <h1 className='detail_title'>{slides[slideIndex].title}</h1>
               <p className='detail_des'>{slides[slideIndex].des}</p>

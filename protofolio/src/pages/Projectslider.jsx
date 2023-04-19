@@ -13,7 +13,7 @@ import "swiper/css/navigation";
 import { EffectCards, Navigation, Pagination } from "swiper";
 import slides from "../projects";
 
-const Slider=({Singlecard,Removecard}) => {
+const Slider=({Singlecard}) => {
 
   return (
     <>
