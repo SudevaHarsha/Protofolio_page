@@ -4,18 +4,18 @@ import {FaGithub,FaTwitter,FaLinkedinIn,FaFacebook} from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="icons_container">
-        <div className="icon">
+        <a href="https://github.com/SudevaHarsha" className="icon">
             <FaGithub className='fa'/>
-        </div>
-        <div className="icon">
+        </a>
+        <a href='https://www.linkedin.com/in/sudeva-harsha-718906255' className="icon">
             <FaLinkedinIn className='fa'/>
-        </div>
+        </a>
         <div className="icon">
             <FaTwitter className='fa' />
         </div>
-        <div className="icon">
+        <a href='https://www.facebook.com/sudeva.harsha' className="icon">
             <FaFacebook className='fa'/>
-        </div>
+        </a>
     </div>
   )
 }

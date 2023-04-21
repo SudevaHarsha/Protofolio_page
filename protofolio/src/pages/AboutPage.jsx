@@ -58,11 +58,11 @@ const AboutPage = () => {
         </div>       
           <div className="circle">
             <div className="skill_category">
-              <span className='list' ></span>
-              <span className='list'></span>
-              <span  className='list'style={{'--v':2}}>
+              <span className='list' style={{'--v':1}}></span>
+              <span className='list' style={{'--v':2}}></span>
+              <span  className='list'style={{'--v':3}}>
               </span>
-              <span className='list'style={{'--v':3}}>
+              <span className='list'style={{'--v':4}}>
               </span>
               <span className='list'></span>
             </div>

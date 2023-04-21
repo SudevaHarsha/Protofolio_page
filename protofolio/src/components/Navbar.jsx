@@ -10,10 +10,10 @@ const Navbar = () => {
             </div>
             <nav className="navlinks">
                 <ul>
-                    <li><Link to="/" className='linknav'>Home</Link></li>
-                    <li><Link to="/about" className='linknav'>About</Link></li>
-                    <li><Link to="/projects" className='linknav'>Projects</Link></li>
-                    <li><Link to="/contact" className='linknav'>Contact me</Link></li>
+                    <li style={{'--a':1}}><Link to="/" className='linknav'>Home</Link></li>
+                    <li style={{'--a':2}}><Link to="/about" className='linknav'>About</Link></li>
+                    <li style={{'--a':3}}><Link to="/projects" className='linknav'>Projects</Link></li>
+                    <li style={{'--a':4}}><Link to="/contact" className='linknav'>Contact me</Link></li>
                 </ul>
             </nav>
         </div>
