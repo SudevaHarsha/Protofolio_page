@@ -43,20 +43,27 @@ const AboutPage = () => {
           {skills.map((skill)=>{
             return<>
             <div className="about_card">
-              <div className="skill_logo" style={{backgroundImage: 'url(' + skill.logoURL + ')'}}>
-                {/* <img src={skill.logoURL} alt="logo"/> */}
-              </div>
-              <div className="skill_name">
-                <h4>{skill.skillName}</h4>
-              </div>
-              <div className="skill_level" style={{'--i':skill.percent+'%'}}>
-                {/* <p>{skill.percent}</p> */}
+              <div className='about_card_background'>
+                <div className="skill_logo" style={{backgroundImage: 'url(' + skill.logoURL + ')'}}>
+                  {/* <img src={skill.logoURL} alt="logo"/> */}
+                </div>
+                <div className="skill_name">
+                  <h4>{skill.skillName}</h4>
+                </div>
+                <div className="skill_level" style={{'--i':skill.percent+'%'}}>
+                  {/* <p>{skill.percent}</p> */}
+                </div>
               </div>
             </div>
             </>
           })}
+        </div>
+        <div className="studies">
+          <div className="hr">
+          </div>  
         </div>       
           <div className="circle">
+          <img src='https://www.webefficient.agency/themes/web-efficient-2017/assets/images/og/en/servicii-implementare-frontend.png' className='circle_img'/>
             <div className="skill_category">
               <span className='list' style={{'--v':1}}></span>
               <span className='list' style={{'--v':2}}></span>
@@ -66,10 +73,10 @@ const AboutPage = () => {
               </span>
               <span className='list'></span>
             </div>
-            <img src='https://www.webefficient.agency/themes/web-efficient-2017/assets/images/og/en/servicii-implementare-frontend.png' className='circle_img'/>
+            
 
           </div>
-         
+  
       </div>
     </div>
   )

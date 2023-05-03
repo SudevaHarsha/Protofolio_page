@@ -13,7 +13,8 @@ import "swiper/css/navigation";
 import { EffectCards, Navigation, Pagination } from "swiper";
 import slides from "../projects";
 
-const Slider=({Singlecard}) => {
+const Slider=({Singlecard,Removecard}) => {
+
 
   return (
     <>
@@ -33,7 +34,9 @@ const Slider=({Singlecard}) => {
            <SwiperSlide key={index}>
               {/* <img src="https://tse4.mm.bing.net/th?id=OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8&pid=Api&P=0" className="sliders_img"/> */}
               <p className="project_name">{slide.title}</p>
-              <button className="project_button" onDoubleClick={()=>Singlecard(index)}>click here</button>
+              <button className="project_button" onClick={()=>Singlecard(index)}>click here</button>
+              <div className="swiper-button-prev" onClick={()=>Removecard(index)}></div>
+              <div className="swiper-button-next"></div>
             </SwiperSlide>
       /*       $("swiper-button-next").click(Removecard)    */
             );

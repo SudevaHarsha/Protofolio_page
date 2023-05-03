@@ -318,7 +318,6 @@ nav{
   stroke-width: 5;
   animation: textAnimate 4s forwards;
   left: -100px;
-
 }.ending{
   stroke: #0ed1c1;
   font-size: 200px;
@@ -331,11 +330,13 @@ nav{
 @keyframes textAnimate{
   0%{
     stroke-dasharray: 0 50%;
+    stroke: #0ed1c1;
   }
   90%{
     opacity: 1;
     stroke-dasharray: 50% 0;
     height: 100%;
+    stroke: red;
   }
   100%{
     opacity: 0;
@@ -402,6 +403,7 @@ nav{
   background-size: cover;
   overflow: hidden;
   position: relative;
+  animation:image 1s forwards;
 }
 
 /* .about_img_container img{
@@ -419,7 +421,9 @@ nav{
   position: absolute;
   left:26%;
   right: auto;
+  opacity: 0;
   top: 20%;
+  animation: image 1s forwards 1s;
 }
 
 .about_skills{
@@ -428,14 +432,47 @@ nav{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  gap:15%;
+  margin: 50px;
 }
 
 .about_card{
   position: relative;
   width: 300px;
   height: 350px;
-  margin: 20px;
+  margin-bottom: 40px;
+  margin-top: 20px;
   background-color: #fff;
+}
+
+.about_card::before{
+  content: '';
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: -4px;
+  bottom: -4px;
+  background: linear-gradient(315deg,#00ccff,#0e1538,#d400d4);
+  transform: skewX(2deg) skewY(4deg);
+}
+.about_card::after{
+  content: '';
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: -4px;
+  bottom: -4px;
+  background: linear-gradient(315deg,#00ccff,#0e1538,#d400d4);
+  filter: blur(80px);
+}
+.about_card_background{
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  background: #000;
+  z-index: 10;
 }
 
 .skill_logo{
@@ -458,16 +495,18 @@ nav{
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #d400d4;
 }
 
 .skill_level{
   position: relative;
   width:80%;
   height: 10px;
-/*   background-color: #000; */
-  border: 2px solid #000;
+  border: 2px solid ;
   margin: 10px auto;
   border-radius: 10px;
+  color: #00ccff;
+  background-color: #000;
 }
 
 .skill_level::after{
@@ -475,7 +514,7 @@ nav{
   width:var(--i);
   height: 100%;
   position: absolute;
-  background-color: #000;
+  background-color: #d400d4;
   top: 0;
   left: 0;
 }
@@ -534,13 +573,11 @@ nav{
   justify-content: center;
   margin: 0px;
   cursor: pointer;
+  animation: spin 8s infinite 5s;
+
 }
-/* .circle .skill_category :checked{
-  opacity: 1;
-} */
-.circle .skill_category{
-  animation: spin 8s linear 1s infinite;
-}
+
+
 @keyframes spin{
   100%{
     transform: rotate(360deg);
@@ -555,11 +592,13 @@ nav{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap; 
+  flex-wrap: nowrap;
+  transition:all 2s ease;
+  opacity:0;
 } 
-/* .circle .skill_category:active .list {
+.circle:active .skill_category .list {
   opacity: 1;
-} */
+} 
  
 .circle .skill_category .list:nth-child(1) {
  
@@ -581,26 +620,52 @@ nav{
   clip-path: circle(35px);
   transform: translate(60%,-60%);
 }
-.circle .skill_category .list:nth-child(3) 
-{
-    background-position: center;
-    background-image: url('https://www.citypng.com/public/uploads/preview/js-javascript-round-logo-icon-png-11662226392lsrrajcm0y.png');
-    background-size:90px;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    clip-path: circle(35px);
-    transform: translate(80%);
-};
 
 .circle .skill_category .list:nth-child(4){
-  background-position: center;
-  background-image: url('https://www.citypng.com/public/uploads/preview/js-javascript-round-logo-icon-png-11662226392lsrrajcm0y.png');
-  background-size:90px;
+  transform: sacle(1);
+  background-image:url('https://ih1.redbubble.net/image.542875238.9623/fpp,small,lustre,wall_texture,product,750x1000.u2.jpg');
+  background-size: 150px;
   background-repeat: no-repeat;
+  background-position: center;
   overflow: hidden;
   clip-path: circle(35px);
+  transform: translate();
+  animation: child2 3s forwards;
+
+}
+.circle .skill_category .list:nth-child(3){
+  transform: sacle(1);
+  background-image:url('https://ih1.redbubble.net/image.542875238.9623/fpp,small,lustre,wall_texture,product,750x1000.u2.jpg');
+  background-size: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  clip-path: circle(35px);
+  transform: translate();
+  animation: child3 3s forwards;
+  
+}
+@keyframes child3{
+  100%{
+    transform: translate(50%,60%);
+  }
+}
+@keyframes child2{
+  100%{
+    transform: translate(80%);
+  }
 }
 
+.hr{
+  color: #00ff59;
+  background-color: #00ff59;
+  width: 50%;
+  transform: rotate(90deg);
+  position: relative;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+}
 
 /*project*/
 
@@ -616,6 +681,7 @@ nav{
   display: flex;
   width: 400px;
   height: 600px;
+  transition: all 1s ease-in-out;
 }
 
 .swiper-slide {
@@ -706,6 +772,8 @@ nav{
   border-radius: 1em;
   background: linear-gradient(50deg,#2a5a3b,#1e4886);
   overflow: hidden;
+  animation: openbox 1.9s forwards;
+  
 }
 
 .project_details_container::before{
@@ -749,7 +817,9 @@ nav{
     transform: rotate(-45deg) translate(0px,450px);
   }
 }
-
+/* .deatiles{
+  opacity:0;
+} */
 .detail_title{
   color:royalblue ;
   font-size: 30px;
@@ -789,7 +859,69 @@ nav{
   background-color: red;
   opacity:0.8;
 }
-.close_button:active{
-  
+
+@keyframes openbox{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 
+/*contact page*/
+
+.contactPage{
+  height: 100%;
+  width: 100%;
+}
+.form{
+  color: #eee;
+  margin: 30px 0;
+  overflow: hidden;
+  padding: 0 500px;
+  position: relative;
+}
+.input_box{
+  height: 40px;
+  width: 70%;
+  margin:30px 0;
+  position:relative;
+}
+.input_name{
+  width:100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: 2px solid #00ccff;
+  padding-left: 10px;
+  color:#eee;
+  font-size: 16px;
+  border-radius: 20px;
+  position: relative;
+}
+.input_box label{
+  position: absolute;
+  top:50%;
+  left:10px;
+  padding-left:10px;
+  text-transform: lowercase;
+  color: #fff;
+  transform: translateY(-50%);
+  font-size: 15px;
+}
+
+.input_name:focus ~label, 
+.input_name:valid ~label{
+  top:-1px;
+  left:10px;
+  background-color: #000;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 5px;
+}
+textarea.input_name{
+  resize: none;
+  
+  overflow: auto;
+}
