@@ -62,8 +62,8 @@ const AboutPage = () => {
           <div className="hr">
           </div>  
         </div>       
-          <div className="circle">
-          <img src='https://www.webefficient.agency/themes/web-efficient-2017/assets/images/og/en/servicii-implementare-frontend.png' className='circle_img'/>
+          <div className="circle">       
+           <img src='https://www.webefficient.agency/themes/web-efficient-2017/assets/images/og/en/servicii-implementare-frontend.png' className='circle_img'/>  
             <div className="skill_category">
               <span className='list' style={{'--v':1}}></span>
               <span className='list' style={{'--v':2}}></span>
@@ -73,8 +73,6 @@ const AboutPage = () => {
               </span>
               <span className='list'></span>
             </div>
-            
-
           </div>
   
       </div>
