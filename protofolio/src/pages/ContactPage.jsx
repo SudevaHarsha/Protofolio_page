@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import emailjs from '@emailjs/browser';
 
+
 const ContactPage = () => {
   function sendEmail(e){
     e.preventDefault();

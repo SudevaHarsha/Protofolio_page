@@ -3,6 +3,7 @@ import { useState,useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
 
+
 const HomePage = () => {
 
   const texts=["developer","designer","web animator"];

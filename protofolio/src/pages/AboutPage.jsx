@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import Navbar from '../components/Navbar';
 import {FaHtml5} from "react-icons/fa";
 
+
 const AboutPage = () => {
 
   const skills=[

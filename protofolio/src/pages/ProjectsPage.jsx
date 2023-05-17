@@ -5,6 +5,7 @@ import slides from '../projects';
 import {IoCloseOutline} from "react-icons/io5";
 
 
+
 const ProjectsPage = () => {
 
   const [slideIndex,setSlideIndex]=useState();
