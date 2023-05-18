@@ -1,7 +1,6 @@
 import axios from "axios";
 
-const sud = axios.create({
+export default axios.create({
     baseURL:'http://localhost:8081'
 })
 
-export default sud();

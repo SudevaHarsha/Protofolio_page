@@ -1,9 +1,11 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect,useContext} from "react";
+import AuthContext from "../context/AuthProvider";
 import axios from '../api/axios';
 
 const LOGIN_URL = '/auth';
 
 const Login = () => {
+    const {setAuth} = useContext(AuthContext);
     const userRef = useRef();
     const errRef = useRef();
 
@@ -21,12 +23,6 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         // if button enabled with JS hack
-        const v1 = USER_REGEX.test(user);
-        const v2 = PWD_REGEX.test(pwd);
-        if (!v1 || !v2) {
-            setErrMsg("Invalid Entry");
-            return;
-        }
         try {
             const response = await axios.post(LOGIN_URL,
                 JSON.stringify({ user, pwd }),
@@ -57,20 +53,20 @@ const Login = () => {
         }
     }
     return (
-        <div className='App'>
+        <div className='Appr'>
             {success ? (
-                <section>
+                <section className="sectionr">
                     <h1>Success!</h1>
                     <p>
                         <a href="#">Sign up</a>
                     </p>
                 </section>
             ) : (
-                <section>
+                <section className="sectionr">
                     <p ref={errRef} className={errMsg ? "errmsgr" : "offscreenr"} aria-live="assertive">{errMsg}</p>
                     <h1>Register</h1>
-                    <form onSubmit={handleSubmit}>
-                        <label htmlFor="username">
+                    <form onSubmit={handleSubmit} className="formr">
+                        <label htmlFor="username" className="labelr">
                             Username:</label>
                         <input
                             type="text"
@@ -79,10 +75,11 @@ const Login = () => {
                             autoComplete="off"
                             onChange={(e) => setUser(e.target.value)}
                             value={user}
+                            className="input1r"
                             required />
 
 
-                        <label htmlFor="password">
+                        <label htmlFor="password" className="labelr">
                             Password
                         </label>
                         <input
@@ -90,12 +87,13 @@ const Login = () => {
                             id="password"
                             onChange={(e) => setPwd(e.target.value)}
                             value={pwd}
-                            required />
-                        <button >Sign in</button>
+                            required
+                            className="input2r" />
+                        <button className="buttonr">Sign in</button>
                     </form>
                     <p>
                         Already registered?<br />
-                        <span className="line">
+                        <span className="liner">
                             {/*put router link here*/}
                             <a href="#">Sign up</a>
                         </span>

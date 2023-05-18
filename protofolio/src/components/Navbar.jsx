@@ -15,6 +15,7 @@ const Navbar = () => {
                     <li style={{'--a':3}}><Link to="/projects" className='linknav'>Projects</Link></li>
                     <li style={{'--a':4}}><Link to="/contact" className='linknav'>Contact me</Link></li>
                     <li style={{'--a':4}}><Link to="/register" className='linknav'>register</Link></li>
+                    <li style={{'--a':4}}><Link to="/login" className='linknav'>login</Link></li>
                 </ul>
             </nav>
         </div>
