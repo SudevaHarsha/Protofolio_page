@@ -2,6 +2,8 @@ import React from 'react';
 import { useState,useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
+import useLogout from '../hooks/logout';
+import { useNavigate,Link } from 'react-router-dom';
 
 
 const HomePage = () => {
@@ -12,6 +14,13 @@ const HomePage = () => {
   const [result,setResult]=useState("");
   const [deleting,setDeleting]=useState(false);
   const [delay,setDelay]=useState(300-Math.random()*100)
+
+  const logout = useLogout();
+  const navigate = useNavigate();
+  const signOut =async () =>{
+    await logout();
+    navigate('/login');
+  }
   /* var widthsvg="3000";
   var xsvg="20"; */
 /*   var svgtext="Sudeva Harsha" 
@@ -66,7 +75,10 @@ const HomePage = () => {
       } */
     },delay);
     return ()=>clearTimeout(id);
+
+    
   }
+
 
   return (
     <div className='parent'>
@@ -98,6 +110,7 @@ const HomePage = () => {
             <tspan x="50%" dy="150">Harsha</tspan>
             </text>        
       </svg>
+      <button onClick={signOut}>sign out</button>
       <Footer/>
     </div>
   )
