@@ -1,18 +1,23 @@
 import { useRef, useState, useEffect,useContext} from "react";
-import AuthContext from "../context/AuthProvider";
+import {Link,useNavigate,useLocation} from 'react-router-dom';
+import useAuth from "../hooks/useAuth";
 import axios from '../api/axios';
+
 
 const LOGIN_URL = '/auth';
 
 const Login = () => {
-    const {setAuth} = useContext(AuthContext);
+    const {setAuth} = useAuth();
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = "/";
     const userRef = useRef();
     const errRef = useRef();
 
     const [user, setUser] = useState('');
     const [pwd, setPwd] = useState('');
     const [errMsg, setErrMsg] = useState('');
-    const [success, setSuccess] = useState(false);
+   
 
     useEffect(() => {
         userRef.current.focus();
@@ -38,7 +43,7 @@ const Login = () => {
             setAuth({ user, pwd, roles, accessToken });
             setUser('');
             setPwd('');
-            setSuccess(true);
+            navigate(from,{replace:true});
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response');
@@ -54,17 +59,10 @@ const Login = () => {
     }
     return (
         <div className='Appr'>
-            {success ? (
-                <section className="sectionr">
-                    <h1>Success!</h1>
-                    <p>
-                        <a href="#">Sign up</a>
-                    </p>
-                </section>
-            ) : (
+           
                 <section className="sectionr">
                     <p ref={errRef} className={errMsg ? "errmsgr" : "offscreenr"} aria-live="assertive">{errMsg}</p>
-                    <h1>Register</h1>
+                    <h1>Login</h1>
                     <form onSubmit={handleSubmit} className="formr">
                         <label htmlFor="username" className="labelr">
                             Username:</label>
@@ -92,14 +90,14 @@ const Login = () => {
                         <button className="buttonr">Sign in</button>
                     </form>
                     <p>
-                        Already registered?<br />
+                        did not register?<br />
                         <span className="liner">
                             {/*put router link here*/}
-                            <a href="#">Sign up</a>
+                            <Link to='/Register'>sign up</Link>
                         </span>
                     </p>
                 </section>
-            )}
+            
         </div>
     )
 }
