@@ -30,6 +30,16 @@ const AboutPage = () => {
       logoURL:"https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png",
       skillName:"node js",
       percent:67
+    },
+    {
+      logoURL:"https://vectorified.com/images/express-js-icon-20.png",
+      skillName:"express js",
+      percent:50
+    },
+    {
+      logoURL:"https://webimages.mongodb.com/_com_assets/cms/lhp1aei33q4xxal08-MongoDB%20Logo.png?auto=format%252Ccompress",
+      skillName:"mongo DB",
+      percent:80
     }
   ];
 
@@ -60,10 +70,20 @@ const AboutPage = () => {
           })}
         </div>
         <div className="studies">
-          <div className="hr">
-          </div>  
+          {/* <div className="hr">
+          </div>  */} 
+          <div className="colleges">
+            <h5>SVCN</h5>
+            <h5>Srichaitanys junior college</h5>
+            <h5>Oxford E.M high school</h5>
+          </div>
+          <div className="years">
+            <h5>2021-2025</h5>
+            <h5>2019-2021</h5>
+            <h5>2019</h5>
+          </div>
         </div>       
-          <div className="circle">       
+         {/*  <div className="circle">       
            <img src='https://www.webefficient.agency/themes/web-efficient-2017/assets/images/og/en/servicii-implementare-frontend.png' className='circle_img'/>  
             <div className="skill_category">
               <span className='list' style={{'--v':1}}></span>
@@ -74,7 +94,7 @@ const AboutPage = () => {
               </span>
               <span className='list'></span>
             </div>
-          </div>
+          </div> */}
   
       </div>
     </div>

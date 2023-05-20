@@ -432,8 +432,8 @@ nav{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap:15%;
-  margin: 50px;
+  gap:30px;
+  margin: 20px;
 }
 
 .about_card{
@@ -530,7 +530,7 @@ nav{
   background-color: #eee;
 } */
 
-.circle{
+/* .circle{
   margin: auto;
   display: flex;
   align-items: center;
@@ -540,7 +540,7 @@ nav{
   width: 800px;
   height: 400px;
 }
-
+ */
 /* .skill_category::before{
   position: absolute;
   width: 250px;
@@ -557,7 +557,7 @@ nav{
 } */
 
 
-.circle_img{
+/* .circle_img{
   position: absolute;
   width: 190px;
   height: 190px;
@@ -655,18 +655,50 @@ nav{
     transform: translate(80%);
   }
 }
-
-.hr{
+ */
+/* .hr{
   color: #00ff59;
   background-color: #00ff59;
   width: 50%;
   transform: rotate(90deg);
   position: relative;
-  display: flexbox;
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 200px;
+} */
+
+.studies{
+  width:100%;
+  margin-top: 50px;
+  display: flex;
+  color: #00ccff;
+  margin-left: 200px;
+  height:100px;
 }
 
+.colleges,.years{
+  font-size: large;
+  font-weight: bold;
+}
+
+.colleges h5,.years h5{
+  margin-top: 30px;
+}
+
+.colleges h5{
+  margin-right: 30px;
+}
+
+.studies::before{
+  content: '';
+ 
+  position: absolute;
+  background-color: #00ff59;
+  width: 10px;
+  left: 0;
+  height: 200px;
+}
 /*project*/
 
 .project_container{
