@@ -86,9 +86,7 @@ const Register = () => {
             {success ? (
                 <section className="sectionr">
                     <h1>Success!</h1>
-                    <p>
-                        <a href="#">Sign In</a>
-                    </p>
+                    <Link to='/Login'>Sign in</Link>
                 </section>
             ) : (
                 <section className="sectionr">

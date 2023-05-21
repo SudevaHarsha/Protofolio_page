@@ -41,8 +41,8 @@ const Login = () => {
             const accessToken = response?.data?.accessToken;
             const roles = response?.data?.roles;
             setAuth({ user, pwd, roles, accessToken });
-            setUser('');
-            setPwd('');
+            setUser("");
+            setPwd("");
             navigate(from,{replace:true});
         } catch (err) {
             if (!err?.response) {
