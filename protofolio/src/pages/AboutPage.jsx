@@ -69,10 +69,10 @@ const AboutPage = () => {
             </>
           })}
         </div>
-        <div className="studies">
-          {/* <div className="hr">
-          </div>  */} 
-          <div className="colleges">
+        {/* <div className="studies">
+           <div className="hr">
+          </div>   
+           <div className="colleges">
             <h5>SVCN</h5>
             <h5>Srichaitanys junior college</h5>
             <h5>Oxford E.M high school</h5>
@@ -82,7 +82,7 @@ const AboutPage = () => {
             <h5>2019-2021</h5>
             <h5>2019</h5>
           </div>
-        </div>       
+        </div>  */}
          {/*  <div className="circle">       
            <img src='https://www.webefficient.agency/themes/web-efficient-2017/assets/images/og/en/servicii-implementare-frontend.png' className='circle_img'/>  
             <div className="skill_category">

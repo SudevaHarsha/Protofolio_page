@@ -8,12 +8,19 @@ import { useNavigate,Link } from 'react-router-dom';
 
 const HomePage = () => {
 
+  let it=1;
+  const [time,setTime]=useState(1);
   const texts=["developer","designer","web animator"];
   const [index,setIndex]=useState(0);
   const [letter,setLetter]=useState(0);
   const [result,setResult]=useState("");
   const [deleting,setDeleting]=useState(false);
   const [delay,setDelay]=useState(300-Math.random()*100)
+  console.log(time);
+
+  const ani=()=>{
+    setTime(2);
+  }
 
   const logout = useLogout();
   const navigate = useNavigate();
@@ -83,7 +90,7 @@ const HomePage = () => {
   return (
     <div className='parent'>
     <div className="display">
-      <Navbar/>
+      <Navbar ani={ani}/>
         <div className="hero_section">
           <div className='img_container'> 
           </div>
@@ -104,13 +111,12 @@ const HomePage = () => {
           </svg>        
         </div>
         </div>
-      <svg viewBox='0 0 1350 600'>
+      {time===1 && <svg viewBox='0 0 1350 600'>
           <text id="starting" className='starting' x="50%" y="40%" width="200" height="200" fill="tranparent" textAnchor='middle'>
             <tspan>Sudeva</tspan>
             <tspan x="50%" dy="150">Harsha</tspan>
             </text>        
-      </svg>
-      <button onClick={signOut}>sign out</button>
+      </svg>}
       <Footer/>
     </div>
   )
