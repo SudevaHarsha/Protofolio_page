@@ -169,7 +169,7 @@ nav{
   100%{
     opacity: 1;
     height: 100%;
-    display:none;
+   /*  display:none; */
   }
 }
 
@@ -460,6 +460,11 @@ nav{
   background: linear-gradient(315deg,#00ccff,#0e1538,#d400d4);
   transform: skewX(2deg) skewY(4deg);
 }
+
+.about_card:hover{
+  background: linear-gradient(315deg,#00ccff,#0e1538,#d400d4);
+}
+
 .about_card::after{
   content: '';
   position: absolute;
@@ -476,8 +481,15 @@ nav{
   width: 100%;
   height:100%;
   position: absolute;
-  background: #000;
+  background: black;
+
   z-index: 10;
+}
+
+.about_card_background :hover{
+  background-color: #00ccff;
+  background:  linear-gradient(315deg,#00ccff,#0e1538,#d400d4) !important;
+  z-index: 7000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
 }
 
 .skill_logo{
