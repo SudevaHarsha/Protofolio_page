@@ -4,6 +4,7 @@ import {FaHtml5} from "react-icons/fa";
 
 
 const AboutPage = () => {
+  const [proj,setProj]=useState(true);
 
   const skills=[
     {
@@ -51,9 +52,16 @@ const AboutPage = () => {
           <h4>waanna know more about me?</h4>
         </div>
         <div className="about_skills"> 
-          {skills.map((skill)=>{
+        {
+          proj ?
+          skills.map((skill,index)=>{
+            
             return<>
-            <div className="about_card">
+            <div className="about_card" onClick={()=>{
+              setProj(false);
+              console.log(proj);
+            }}>
+              {console.log(proj)}
               <div className='about_card_background'>
                 <div className="skill_logo" style={{backgroundImage: 'url(' + skill.logoURL + ')'}}>
                   {/* <img src={skill.logoURL} alt="logo"/> */}
@@ -67,7 +75,26 @@ const AboutPage = () => {
               </div>
             </div>
             </>
-          })}
+          })
+          :
+          skills.map((skill)=>{
+            return<>
+            <div className="about_card" onClick={()=>{
+              setProj(true);}}>
+              <div className='about_card_background'>
+                <div className="skill_logo"style={{backgroundImage: 'url(' + skill.logoURL + ')'}}>
+                </div>
+                <div className="skill_name">
+                  <h4 >{skill.skillName}</h4>
+                </div>
+                <div className='skill_navigate'>
+                  the projects that include the above skill are:-
+                </div>
+              </div>
+            </div>
+            </>
+          })
+        }
         </div>
         {/* <div className="studies">
            <div className="hr">
