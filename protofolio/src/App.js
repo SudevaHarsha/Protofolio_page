@@ -21,12 +21,12 @@ const App = () => {
         <Route element={<PersistLogin/>}>
           <Route path="/register" element={<Register/>} />
           <Route path="/login" element={<Login/>} />
-          <Route element={<RequireAuth/>}>
+          {/* <Route element={<RequireAuth/>}> */}
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage/>} />
             <Route path="/projects" element={<ProjectsPage/>} />
             <Route path="/contact" element={<ContactPage/>} />
-          </Route>
+          {/* </Route> */}
         </Route>
       </Route>
     </Routes>

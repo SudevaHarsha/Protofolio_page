@@ -9,6 +9,7 @@ import { useNavigate,Link } from 'react-router-dom';
 const HomePage = () => {
 
   let it=1;
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [time,setTime]=useState(1);
   const texts=["developer","designer","web animator"];
   const [index,setIndex]=useState(0);
@@ -17,11 +18,23 @@ const HomePage = () => {
   const [deleting,setDeleting]=useState(false);
   const [delay,setDelay]=useState(300-Math.random()*100)
   console.log(time);
+  /* if(time==1){
+    sessionStorage.setItem('myData', 1);
+  } */
 
+  useEffect(()=>{
+    if(windowWidth < 650){
+      sessionStorage.setItem('myData', 0);
+    }
+  },[])
+  
   const ani=()=>{
-    setTime(2);
-  }
+    setTime(0);
+    console.log(time);
+    sessionStorage.setItem('myData', 0);
 
+  }
+  console.log(time);
   const logout = useLogout();
   const navigate = useNavigate();
   const signOut =async () =>{
@@ -82,19 +95,20 @@ const HomePage = () => {
       } */
     },delay);
     return ()=>clearTimeout(id);
-
     
   }
+
+  
 
 
   return (
     <div className='parent'>
-    <div className="display">
+    <div className={`${sessionStorage.getItem('myData')!=0 ? "display": ""}`}>
       <Navbar ani={ani}/>
         <div className="hero_section">
-          <div className='img_container'> 
+          <div className={`img_container ${sessionStorage.getItem('myData')!=0 ?"img_container_animation" : "img_container_animation1"}`}> 
           </div>
-          <div className="hero_text">
+          <div className={`hero_text ${sessionStorage.getItem('myData')!=0 ?"hero_text_animation" : ""}`}>
             <h1 className="fixed_text">I Am Sudeva harsha</h1>
             <div className="changing_text">
               <h1 className="animate_text">i am a <span className='result'>{result}</span></h1>
@@ -106,17 +120,25 @@ const HomePage = () => {
   {/*         <div className='s_container'> */}
             
           {/* </div> */}
-          <svg width="300" height="300">
-            <text className='ending' x="50%" y="70%" fill="tranparent" textAnchor='middle'>sh</text>
+          <svg width="300" height="300" className='smallsvg'>
+            <text className={` ${sessionStorage.getItem('myData')!=0 ? "ending_animation" :"ending"}`} x="50%" y="70%" fill="tranparent" textAnchor='middle'>sh</text>
           </svg>        
         </div>
         </div>
-      {time===1 && <svg viewBox='0 0 1350 600'>
+      {sessionStorage.getItem('myData')!=0 && windowWidth > 650  && <svg viewBox='0 0 1350 600' /* className='bigsvg' */>
           <text id="starting" className='starting' x="50%" y="40%" width="200" height="200" fill="tranparent" textAnchor='middle'>
             <tspan>Sudeva</tspan>
             <tspan x="50%" dy="150">Harsha</tspan>
             </text>        
       </svg>}
+    {/*   {sessionStorage.getItem('myData')!=0  && <svg viewBox='0 0 100 100' width="300" height="300">
+          <text id="starting1" className='starting1' x="50%" y="70%" width="200" height="200"  fill="tranparent" textAnchor='middle'>
+            shxdgdjfg
+            </text>        
+      </svg>} */}
+      
+
+  
       <Footer/>
     </div>
   )
