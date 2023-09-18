@@ -3,10 +3,20 @@ import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 import {  RxCross2 } from "react-icons/rx";
+import { FaDownload } from 'react-icons/fa';
 
 const Navbar = ({ani}) => {
     const [showMediaIcons, setShowMediaIcons] = useState(false);
     const [clickMenu,setClickMenu] = useState(false);
+
+    const handleDownload = () => {
+        /*    const link = document.createElement('a');
+           link.href = h1;
+           link.download = 'Sudeva resume.pdf';
+           link.click(); */
+         };
+
+
   return (
     <>
         <div className={` ${sessionStorage.getItem('myData')!=0 ? "navbar_animation" :"navbar"}`}>
@@ -26,6 +36,7 @@ const Navbar = ({ani}) => {
         <nav className='nav-mobile'>
         <div className="nav-mobile-welcome">
                 <h4>welcome</h4>
+                <button onClick={handleDownload} className="signout1">Resume <FaDownload /></button>
                { clickMenu ?
                <RxCross2 className='nav-mobile-hamburger-icon'onClick={()=>{
                 setClickMenu(!clickMenu); }}/>

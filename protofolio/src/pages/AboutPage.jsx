@@ -49,6 +49,11 @@ const AboutPage = () => {
       percent: 80
     },
     {
+      logoURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png",
+      skillName: "typescript",
+      percent: 60
+    },
+    {
       logoURL: "https://2.bp.blogspot.com/-KVFNcyNJpmc/XIe-Sqa674I/AAAAAAAAIuk/VRK5WWydfD4yjMq_AkU6B2h3WAROEvOMgCK4BGAYYCw/s1600/logo%2Bfigma%2Bicon.png",
       skillName: "figma",
       percent: 100
