@@ -18,6 +18,7 @@ import image10 from "../images/typescript-cart.png"
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
 import { MdOutlineDeveloperMode } from 'react-icons/md';
+import RealFooter from '../components/RealFooter';
 
 
 
@@ -289,14 +290,14 @@ const ProjectsPage = () => {
               }}>MERN</div>
               <div className='select_butt selectButtonMobile'>
                 <select onChange={(e) => {
-                setType(true);
-                handleType(e.target.value);
-              }}>
+                  setType(true);
+                  handleType(e.target.value);
+                }}>
                   <option value="Full stack">MERN</option>
                   <option value="Front end">Front end</option>
                   <option value="Back end">Back end</option>
                 </select>
-                </div>
+              </div>
               <div className="themeicons">
                 <div className={`themeicon ${!themeFilter ? "themeiconselected" : ""}`} onClick={() => setThemeFilter(false)}><FaGithub /></div>
                 <div className={`themeicon ${themeFilter ? "themeiconselected" : ""}`} onClick={() => setThemeFilter(true)}><MdOutlineDeveloperMode /></div>
@@ -331,6 +332,7 @@ const ProjectsPage = () => {
         </div>
 
       </div>
+      <RealFooter />
 
     </>
   )

@@ -4,6 +4,7 @@ import { FaHtml5 } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import Experience, { Education } from '../components/details';
 import { motion, useInView, useMotionValue, useScroll, useSpring } from 'framer-motion';
+import RealFooter from '../components/RealFooter';
 
 
 const AboutPage = () => {
@@ -289,7 +290,9 @@ const AboutPage = () => {
       
       <Experience />
       <Education />
+      <RealFooter />
     </div>
+    
   )
 }
 

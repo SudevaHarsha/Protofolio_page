@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaGithub, FaTwitter, FaLinkedinIn, FaFacebook, FaWhatsapp, FaShare, FaDownload, FaArrowRight } from "react-icons/fa";
 import useLogout from '../hooks/logout';
 import {IoIosArrowUp} from "react-icons/io"
@@ -68,6 +68,32 @@ const Footer = () => {
   )
 }
 export const FooterMobile = ({isFooter,setIsFotter}) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Function to update window width when the window is resized
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Add event listener to window resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  // Set the CSS variable '--window-width' with the current window width
+  const setCssVariable = () => {
+    const modifiedWidth = windowWidth - 165;
+    document.documentElement.style.setProperty('--window-width', `${modifiedWidth}px`);
+  };
+
+  useEffect(() => {
+    setCssVariable();
+  }, [windowWidth]);
 
   const logout = useLogout();
   const navigate = useNavigate();
