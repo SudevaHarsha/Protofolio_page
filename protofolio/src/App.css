@@ -2123,7 +2123,7 @@ a:visited {
     align-items: center;
     justify-content: center;
     transform: rotate(90deg) !important;
-    left: 210px;
+    left: 190px;
     top: 250px;
     /*  transform: translate(-200px); */
     animation: Movein 0.5s ease-in-out forwards;
@@ -2136,7 +2136,7 @@ a:visited {
 
   .arrowIconCont {
     position: fixed;
-    left: 340px;
+    left: 320px;
     top: 200px;
     color: #fff;
     font-size: 25px;
@@ -2799,6 +2799,9 @@ a:visited {
   justify-content: center;
   align-items: center;
   margin-right: 0px !important;
+}
+.mobileIngIconCont{
+  position: relative;
 }
 
 }

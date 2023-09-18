@@ -4,6 +4,7 @@ import useLogout from '../hooks/logout';
 import {IoIosArrowUp} from "react-icons/io"
 import { useNavigate, Link } from 'react-router-dom';
 import image9 from "../images/ui2y.png"
+import resume from "../images/sudeva harsha resume.docx"
 
 const Footer = () => {
 
@@ -40,10 +41,10 @@ const Footer = () => {
   };
 
   const handleDownload = () => {
-    /*    const link = document.createElement('a');
-       link.href = h1;
+       const link = document.createElement('a');
+       link.href = resume;
        link.download = 'Sudeva resume.pdf';
-       link.click(); */
+       link.click();
   };
 
   return (
@@ -101,10 +102,10 @@ export const FooterMobile = ({isFooter,setIsFotter}) => {
   };
 
   const handleDownload = () => {
-    /*    const link = document.createElement('a');
-       link.href = h1;
+       const link = document.createElement('a');
+       link.href = resume;
        link.download = 'Sudeva resume.pdf';
-       link.click(); */
+       link.click();
   };
 
   return (

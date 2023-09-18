@@ -4,16 +4,17 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 import {  RxCross2 } from "react-icons/rx";
 import { FaDownload } from 'react-icons/fa';
+import resume from "../images/sudeva harsha resume.docx"
 
 const Navbar = ({ani}) => {
     const [showMediaIcons, setShowMediaIcons] = useState(false);
     const [clickMenu,setClickMenu] = useState(false);
 
     const handleDownload = () => {
-        /*    const link = document.createElement('a');
-           link.href = h1;
+           const link = document.createElement('a');
+           link.href = resume;
            link.download = 'Sudeva resume.pdf';
-           link.click(); */
+           link.click();
          };
 
 

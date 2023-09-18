@@ -7,6 +7,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 
 
+
 const HomePage = () => {
 
   let it = 1;
@@ -40,7 +41,7 @@ const HomePage = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       ani();
-    }, 4000); 
+    }, 4000);
 
     return () => clearTimeout(timeoutId);
   }, []);
@@ -110,20 +111,20 @@ const HomePage = () => {
 
   let dropdownRef = useRef();
 
-    useEffect(() => {
-        let handler = (e) => {
-          
-            if (dropdownRef.current &&!dropdownRef.current.contains(e.target)) {
-                setIsFotter(false);
-            }
-        };
+  useEffect(() => {
+    let handler = (e) => {
 
-        document.addEventListener("mousedown", handler)
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsFotter(false);
+      }
+    };
 
-        return () => {
-            document.removeEventListener("mousedown", handler)
-        }
-    })
+    document.addEventListener("mousedown", handler)
+
+    return () => {
+      document.removeEventListener("mousedown", handler)
+    }
+  })
 
 
   return (
@@ -131,7 +132,16 @@ const HomePage = () => {
       <div className={`${sessionStorage.getItem('myData') != 0 ? "display" : ""}`} >
         <Navbar ani={ani} />
         <div className="hero_section">
-          <div className={`img_container ${sessionStorage.getItem('myData') != 0 ? "img_container_animation" : "img_container_animation1"}`}>
+          <div className='mobileIngIconCont'>
+            <div className={`img_container ${sessionStorage.getItem('myData') != 0 ? "img_container_animation" : "img_container_animation1"}`}>
+            </div>
+            {
+              isFotter ? <div className="mobileFooter" ref={dropdownRef}>
+                <FooterMobile isFotter={isFotter} setIsFotter={setIsFotter} />
+              </div> : <div className="arrowIconCont" onClick={() => setIsFotter(true)}>
+                <FaArrowLeft className='arrowIcon' />
+              </div>
+            }
           </div>
           <div className={`hero_text ${sessionStorage.getItem('myData') != 0 ? "hero_text_animation" : ""}`}>
             <h1 className="fixed_text">I Am Sudeva harsha</h1>
@@ -148,13 +158,7 @@ const HomePage = () => {
           <svg width="300" height="300" className='smallsvg'>
             <text className={` ${sessionStorage.getItem('myData') != 0 ? "ending_animation" : "ending"}`} x="50%" y="70%" fill="tranparent" textAnchor='middle'>sh</text>
           </svg>
-          {
-            isFotter ? <div className="mobileFooter" ref={dropdownRef}>
-              <FooterMobile isFotter={isFotter} setIsFotter={setIsFotter} />
-            </div> : <div className="arrowIconCont" onClick={()=>setIsFotter(true)}>
-              <FaArrowLeft className='arrowIcon' />
-            </div>
-          }
+
         </div>
       </div>
       {sessionStorage.getItem('myData') != 0 && windowWidth > 650 && <svg viewBox='0 0 1350 600' /* className='bigsvg' */>
