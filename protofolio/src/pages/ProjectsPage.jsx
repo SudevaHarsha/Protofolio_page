@@ -190,9 +190,9 @@ const ProjectsPage = () => {
     console.log(index);
   }
 
-  const handle = (index) => {
-    console.log(index);
-    const filter = projects[index];
+  const handle = (project) => {
+/*     console.log(index); */
+    const filter = project;
     if (themeFilter) {
       const dynamicLink = filter.projectLink;
       window.open(dynamicLink, '_blank');
@@ -321,7 +321,7 @@ const ProjectsPage = () => {
                   return <>
                     <div className='row' onClick={() => {
                       console.log(index);
-                      handle(index)
+                      handle(project)
                     }}>
                       <img src={project.projectimg} loading='lazy' />
                       <div className='layer'>
