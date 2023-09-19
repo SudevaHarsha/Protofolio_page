@@ -14,6 +14,7 @@ import image7 from "../images/hotstary.png"
 import image8 from "../images/ui1y.png"
 import image9 from "../images/ui2y.png"
 import image10 from "../images/typescript-cart.png"
+import image11 from "../images/protofolioy.png"
 
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
@@ -117,6 +118,14 @@ const ProjectsPage = () => {
       projectdesc: "A perfect admin dash board which consists of deatils about products , customers and various statistical deatils that the admin of the page needs.",
       githubLink: "https://github.com/SudevaHarsha/REACT_DASHBOARD",
       projectLink: "https://admin-dasboard-sudeva.onrender.com",
+      projectskills: ["html", "css", "java script", "node js", "express js", "mongo DB", "react js"],
+    },
+    {
+      projectimg: image11,
+      projecttype: ["Full stack"],
+      projectdesc: "A decent protfolio showcasing all my skills and projects to get attention of potential clients.",
+      githubLink: "https://github.com/SudevaHarsha/Protofolio_page",
+      projectLink: "https://sudevaharsha-protfolio.onrender.com",
       projectskills: ["html", "css", "java script", "node js", "express js", "mongo DB", "react js"],
     },
     {

@@ -15,8 +15,8 @@ const Footer = () => {
     navigate('/login');
   }
   const handleShareClick = async () => {
-    const websiteUrl = 'https://www.yourwebsite.com';
-    const shareMessage = `Check out this awesome website: ${websiteUrl}`;
+    const websiteUrl = 'https://sudevaharsha-protfolio.onrender.com';
+    const shareMessage = `Check out sudeva's awesome protfolio: ${websiteUrl}`;
     const imageUrl = 'https://tse1.mm.bing.net/th?id=OIP.HxV79tFMPfBAIo0BBF-sOgHaEy&pid=Api&rs=1&c=1&qlt=95&w=168&h=108';
 
     const blob = await fetch(imageUrl).then((response) => response.blob());
@@ -102,8 +102,8 @@ export const FooterMobile = ({isFooter,setIsFotter}) => {
     navigate('/login');
   }
   const handleShareClick = async () => {
-    const websiteUrl = 'https://www.yourwebsite.com';
-    const shareMessage = `Check out this awesome website: ${websiteUrl}`;
+    const websiteUrl = 'https://sudevaharsha-protfolio.onrender.com';
+    const shareMessage = `Check out sudeva's awesome protfolio: ${websiteUrl}`;
     const imageUrl = 'https://tse1.mm.bing.net/th?id=OIP.HxV79tFMPfBAIo0BBF-sOgHaEy&pid=Api&rs=1&c=1&qlt=95&w=168&h=108';
 
     const blob = await fetch(imageUrl).then((response) => response.blob());
